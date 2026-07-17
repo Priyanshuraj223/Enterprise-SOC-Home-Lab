@@ -1,0 +1,25 @@
+title: Detect Registry Run Key Persistence
+id: 7f4d3e1a-5b8c-4a2d-b6e7-000000000002
+status: experimental
+description: Detects creation or modification of Windows Registry Run keys commonly used for persistence.
+author: Priyanshu Raj
+date: 2026-07-17
+
+logsource:
+  product: windows
+  category: registry_set
+
+detection:
+  selection:
+    TargetObject|contains: '\Software\Microsoft\Windows\CurrentVersion\Run'
+  condition: selection
+
+falsepositives:
+  - Legitimate software installation
+  - Enterprise application updates
+
+level: high
+
+tags:
+  - attack.persistence
+  - attack.t1547.001
