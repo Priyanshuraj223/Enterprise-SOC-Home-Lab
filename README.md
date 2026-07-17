@@ -1,36 +1,38 @@
-# Enterprise SOC Home Lab using Wazuh SIEM for Threat Detection and Incident Response
+# 🛡️ Enterprise SOC Home Lab
 
-> A production-inspired Security Operations Center (SOC) home lab built using Wazuh SIEM, Ubuntu Server, Windows 11, Sysmon, and Kali Linux to simulate attacks, detect threats, investigate security events, and perform incident response.
-
----
-
-## Project Overview
-
-This project demonstrates the design and implementation of an enterprise-style Security Operations Center (SOC) in a virtual lab environment.
-
-The objective is to gain hands-on experience with security monitoring, threat detection, incident response, Windows logging, and attack simulation while following industry best practices.
-
-Rather than simply installing security tools, this portfolio focuses on understanding how a SOC operates—from collecting logs to investigating alerts and documenting incidents.
+> A production-inspired Security Operations Center (SOC) home lab built using **Wazuh SIEM**, **Ubuntu Server**, **Windows 11**, **Sysmon**, and **Kali Linux** to simulate cyber attacks, detect threats, investigate security events, and perform incident response.
 
 ---
 
-## Project Goals
+## 📌 Project Overview
+
+This project demonstrates the design, deployment, and operation of an enterprise-style Security Operations Center (SOC) in a virtual lab environment.
+
+The objective is to gain practical experience with security monitoring, threat detection, Windows event logging, attack simulation, detection engineering, and incident response while following industry best practices.
+
+Rather than simply installing security tools, this repository focuses on understanding the complete SOC workflow—from generating telemetry and detecting threats to investigating alerts and documenting incidents.
+
+---
+
+# 🎯 Project Goals
 
 - Build an enterprise SOC environment
 - Deploy and configure Wazuh SIEM
 - Monitor Windows endpoints using Sysmon
 - Collect and analyze security logs
 - Simulate real-world cyber attacks
-- Investigate alerts
-- Map detections to the MITRE ATT&CK framework
+- Investigate alerts in Wazuh
+- Perform threat hunting
+- Map detections to the MITRE ATT&CK Framework
+- Build reusable attack simulation scripts
 - Document incident response procedures
-- Build a professional cybersecurity portfolio
+- Develop a professional cybersecurity portfolio
 
 ---
 
-## Planned Lab Architecture
+# 🏗️ Lab Architecture
 
-```
+```text
                    Kali Linux
                 (Attacker Machine)
                         │
@@ -55,77 +57,126 @@ Rather than simply installing security tools, this portfolio focuses on understa
 
 ---
 
-## Technology Stack
+# 💻 Lab Environment
+
+| Component | Details |
+|-----------|---------|
+| Hypervisor | VirtualBox |
+| SIEM | Wazuh 4.14.x |
+| Manager OS | Ubuntu Server |
+| Endpoint | Windows 11 |
+| Endpoint Monitoring | Sysmon |
+| Attacker Machine | Kali Linux |
+| Detection Framework | MITRE ATT&CK |
+| Version Control | Git & GitHub |
+
+---
+
+# ⚙️ Technology Stack
 
 | Category | Technology |
 |----------|------------|
 | SIEM | Wazuh |
-| Operating System | Ubuntu Server |
-| Endpoint | Windows 11 |
 | Endpoint Monitoring | Sysmon |
+| Operating System | Windows 11 |
+| Server | Ubuntu Server |
 | Attacker Machine | Kali Linux |
-| Virtualization | VMware Workstation Pro / VirtualBox |
-| Framework | MITRE ATT&CK |
-| Version Control | Git & GitHub |
-| Scripting | Python |
+| Virtualization | VirtualBox |
+| Scripting | PowerShell |
+| Detection Framework | MITRE ATT&CK |
 | Documentation | Markdown |
+| Version Control | Git & GitHub |
 
 ---
 
-## Planned Attack Scenarios
+# 🚀 Attack Simulation Toolkit
 
-- Nmap Port Scan
-- Brute Force Authentication
-- PowerShell Execution
-- Suspicious Process Creation
-- File Integrity Monitoring
-- Malware Simulation (EICAR)
-- Persistence Techniques
-- Privilege Escalation (Controlled)
-- Threat Hunting Exercises
+This repository includes a modular **PowerShell Attack Simulation Toolkit** designed to safely generate Windows security telemetry for SOC training.
+
+Location:
+
+```text
+scripts/
+```
+
+Current Modules:
+
+| Module | Description |
+|---------|-------------|
+| 01 | Encoded PowerShell Execution |
+| 02 | Scheduled Task Persistence |
+| 03 | Registry Run Key Persistence |
+| 04 | Suspicious Process Execution |
+| 05 | Windows Defender Status |
+| Cleanup | Restore Lab Environment |
+
+Toolkit Features:
+
+- Modular design
+- Reusable logging framework
+- Safe simulations
+- Automated cleanup
+- Wazuh compatible
+- Sysmon compatible
 
 ---
 
-## Skills Demonstrated
+# 🛡️ MITRE ATT&CK Coverage
 
-- Security Operations (SOC)
+| Technique | ATT&CK ID |
+|------------|-----------|
+| PowerShell | T1059.001 |
+| Scheduled Task | T1053.005 |
+| Registry Run Keys | T1547.001 |
+| Command Execution | T1059 |
+| Windows Defender Discovery | Discovery |
+
+> More ATT&CK techniques will be added as the project evolves.
+
+---
+
+# 📖 Case Studies
+
+| # | Status | Topic |
+|---|--------|-------|
+| 01 | ✅ Completed | Nmap Reconnaissance |
+| 02 | 🚧 In Progress | PowerShell Execution |
+| 03 | ⏳ Planned | Registry Persistence |
+| 04 | ⏳ Planned | LOLBins |
+| 05 | ⏳ Planned | Credential Access |
+| 06 | ⏳ Planned | Malware Simulation |
+| 07 | ⏳ Planned | Detection Engineering |
+
+---
+
+# 🎯 Skills Demonstrated
+
+- Security Operations Center (SOC)
 - SIEM Administration
 - Threat Detection
-- Security Monitoring
-- Incident Response
-- Windows Event Log Analysis
+- Windows Event Analysis
 - Sysmon
-- Linux Administration
 - Threat Hunting
-- MITRE ATT&CK
 - Detection Engineering
-- Python Automation
+- Incident Response
+- MITRE ATT&CK
+- Windows Security
+- Linux Administration
+- PowerShell Automation
 - Git & GitHub
+- Technical Documentation
 
 ---
 
-## Project Roadmap
+# 📂 Repository Structure
 
-- [x] Project Planning
-- [ ] Virtual Lab Setup
-- [ ] Wazuh Installation
-- [ ] Endpoint Monitoring
-- [ ] Attack Simulation
-- [ ] Detection Engineering
-- [ ] Incident Response
-- [ ] Threat Hunting
-- [ ] Documentation
-- [ ] Portfolio Completion
-
----
-
-## Repository Structure
-
-```
+```text
 Enterprise-SOC-Home-Lab/
+│
 ├── architecture/
 ├── assets/
 ├── attack-scenarios/
+├── case-studies/
 ├── configs/
 ├── dashboards/
 ├── detection-rules/
@@ -141,57 +192,100 @@ Enterprise-SOC-Home-Lab/
 
 ---
 
-## Documentation
+# 📚 Documentation
 
-Detailed documentation will be available in the **docs/** directory.
+Project documentation is available in the **docs/** directory.
+
+Included documents:
 
 - Project Bible
 - Project Status
 - Development Log
 - Interview Notes
 - Resources
+- Decision Log
+- Baseline Setup
 
 ---
 
-## Current Status
+# 📈 Current Progress
 
-**Phase 1 — Project Foundation**
+## ✅ Completed
 
-Current Progress:
-- Repository initialized
-- Documentation structure created
-- Development roadmap defined
+- Enterprise SOC lab deployed
+- Wazuh Manager configured
+- Windows 11 Agent enrolled
+- Sysmon integrated
+- Threat Hunting verified
+- Attack Simulation Toolkit created
+- Logging framework implemented
+- Cleanup automation implemented
+- Case Study 01 completed
+- Case Study 02 in progress
 
 ---
 
-## Future Enhancements
+## 🚧 Currently Working On
 
-- Active Directory Integration
-- Microsoft Sentinel
-- Threat Intelligence Integration
-- SOAR Automation
+- Detection Engineering
+- Sigma Rules
+- Incident Response Reports
+- Wazuh Dashboards
+- Additional Attack Simulations
+
+---
+
+# 🛣️ Roadmap
+
+- [x] Project Planning
+- [x] Virtual Lab Setup
+- [x] Wazuh Installation
+- [x] Windows Agent Deployment
+- [x] Sysmon Integration
+- [x] Attack Simulation Toolkit
+- [ ] Detection Engineering
+- [ ] Sigma Rules
+- [ ] Incident Reports
+- [ ] Threat Hunting Playbooks
+- [ ] Dashboard Customization
+- [ ] Final Portfolio Polish
+
+---
+
+# 🔮 Future Enhancements
+
+- Active Directory Lab
+- Microsoft Sentinel Integration
 - Zeek
 - Suricata
 - Elastic Stack
+- SOAR Automation
+- Threat Intelligence Integration
 - Docker Deployment
-- Cloud SOC
+- Cloud SOC (Azure)
 
 ---
 
-## Author
+# 👨‍💻 Author
 
 **Priyanshu Raj**
 
 Aspiring SOC Analyst | Cybersecurity Enthusiast
 
-GitHub:
+**GitHub:**  
 https://github.com/Priyanshuraj223
 
-LinkedIn:
+**LinkedIn:**  
 https://www.linkedin.com/in/priyanshuraj223
 
 ---
 
-## License
+# 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
+
+> **Disclaimer**
+>
+> This project is intended solely for educational purposes and authorized security testing within a controlled lab environment. Do not use these techniques on systems you do not own or have explicit permission to test.
